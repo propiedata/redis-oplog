@@ -5,6 +5,7 @@ import './synthetic_mutators';
 import './client_side_mutators';
 import './publishComposite/client.test';
 import './optimistic-ui/client.test';
+import './payload_batching.client';
 // import './server-autorun/client';
 import './transformations/client';
 import './publish-counts/client';
@@ -661,7 +662,7 @@ _.each(Collections, (Collection, key) => {
                 removed(docId) {
                     if (docId === _id3) {
                         assert.equal(docId, _id3);
-    
+
                         // Now we will add it back!
                         updateSync(
                             { _id: _id3 },
@@ -682,7 +683,7 @@ _.each(Collections, (Collection, key) => {
                         // console.log('id3 should be added back');
                         assert.equal(docId, _id3);
                         assert.isTrue(inChanged);
-                        
+
                         observer.stop();
                         handle.stop();
                         done();
