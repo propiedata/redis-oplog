@@ -50,8 +50,8 @@ Package.onTest(function(api) {
   api.use('mongo');
   api.use('random');
   api.use('accounts-password');
-  api.use('matb33:collection-hooks@0.8.4');
-  api.use('alanning:roles@1.2.16');
+  api.use('matb33:collection-hooks');
+  api.use('alanning:roles');
 
   api.use(['meteortesting:mocha@1.0.0', 'meteortesting:mocha-core@1.0.1']);
 
